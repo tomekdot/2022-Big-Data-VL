@@ -1,21 +1,3 @@
-# Goal
-# Your task is to implement an executable program, which will read two csv files, join them using a specified column
-# and then write the result to the standard output.
-# Users should be able to specify the join type (inner, left or right).
-# Implementation should not rely on external libraries for joining the files.
-# The program should be executed with a command: join file_path file_path column_name join_type
-
-# Assumptions
-# 1. Input files conform to the https://datatracker.ietf.org/doc/html/rfc4180
-# 2. Header is always present
-# 3. Rows may appear in any order
-# 4. Each input file can be much bigger than there is available memory on the machine
-
-# 1. Implement and argue for the default join type (if none specified)
-# 2. Handle invalid parameters
-# 3. Not testing something is also OK as long as the decision can be defended
-# 4. Document the solution and important decisions you have
-
 # !/usr/bin/env python3
 # coding: utf-8
 # Created By: Tomasz Kaczak
@@ -76,7 +58,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# Sample input
-# python3 main.py file_1.csv file_2.csv column_name join_type
