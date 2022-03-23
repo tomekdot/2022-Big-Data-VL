@@ -1,4 +1,3 @@
-
 # Goal
 # Your task is to implement an executable program, which will read two csv files, join them using a specified column
 # and then write the result to the standard output.
@@ -41,6 +40,7 @@ def join_csv(file_path_1, file_path_2, column_name, join_type):
             print('Invalid join type')
 
 
+
 def join_inner(reader_1, reader_2, column_name):
     for row_1 in reader_1:
         for row_2 in reader_2:
@@ -68,8 +68,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('file_path_1', help='path to the first file')
     parser.add_argument('file_path_2', help='path to the second file')
-    parser.add_argument('column_name', help='name of the column to join on')
-    parser.add_argument('join_type', help='type of join (inner, left or right)')
+    parser.add_argument('column_name', help='column name to join')
+    parser.add_argument('join_type', help='join type')
     args = parser.parse_args()
     join_csv(args.file_path_1, args.file_path_2, args.column_name, args.join_type)
 
@@ -79,4 +79,4 @@ if __name__ == '__main__':
 
 
 # Sample input
-# python main.py file_1.csv file_2.csv column_name join_type
+# python3 main.py file_1.csv file_2.csv column_name join_type
